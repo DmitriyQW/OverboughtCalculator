@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Overbought Calculator</string>
+
+    <string name="logo_text">Overbought Calculator</string>
+
+    <string name="rezult">CALCULATE</string>
+    <string name="zaplatil">Expenses :</string>
+    <string name="plus_steam">Income :</string>
+    <string name="zist_pribil">Profit :</string>
+    <string name="kpd_vigodi">Efficiency benefits:</string>
+    <string name="exeption_date_input">Enter the data!</string>
+    <string name="currency">Rub</string>
+    <string name="rezults_text">Results :</string>
+    <string name="c_d_background">Background</string>
+    <string name="profit_one_piece">Profit per item : </string>
+
+
+    <string name="c_d_bacgrund_futer">Background of the name</string>
+
+    <string name="t_neam">Product Name</string>
+    <string name="t_cost_bay">Cost of buying the product rub</string>
+    <string name="t_cost_sale">Cost of sale of goods rub</string>
+    <string name="t_comsion_sale">Sales commission %</string>
+    <string name="t_count">Quantity of goods pc</string>
+
+    <string name="neam">Laptop</string>
+    <string name="site_price">0 rubles.</string>
+    <string name="auto_zak_steam">0 rubles.</string>
+    <string name="commission_in_sale">0 %</string>
+    <string name="count_items">0 pc</string>
+
+    <string name="bt_valute">Currency button</string>
+    <string name="bt_histori">The history button</string>
+    <string name="bt_main">Home button</string>
+
+
+    <string name="tp_logo_app">Logo app</string>
+
+
+
+    <string name="curs_dolar">91,21 ₽</string>
+    <string name="curs_evro">98,19 ₽</string>
+    <string name="curs_yanu">12,58 ₽</string>
+    <string name="valute_in_contert">Currency to convert</string>
+    <string name="valute_to_convert">The currency to convert to</string>
+    <string name="rezult_contert">Result</string>
+
+    <string name="hint_val_convert">128,82</string>
+    <string name="hint_tezult_convert">1,42</string>
+    <string name="convetirovat">Convert</string>
+
+</resources>

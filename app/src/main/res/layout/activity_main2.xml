@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".MainActivity2">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:contentDescription="@string/c_d_bacgrund_futer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@color/futer_bacgraund" />
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="177sp"
+        android:layout_height="55sp"
+        android:contentDescription="@string/tp_logo_app"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/logo_app" />
+
+    <TextView
+        android:id="@+id/textView_in_convert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="436dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="@string/valute_in_contert"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView_rezult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="564dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="@string/rezult_contert"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText_in_convert"
+        android:layout_width="277sp"
+        android:layout_height="48sp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="484dp"
+        android:background="@drawable/stily_blac_edit_text"
+        android:ems="10"
+        android:hint="@string/hint_val_convert"
+        android:inputType="number|numberDecimal"
+        android:paddingStart="14sp"
+        android:paddingEnd="8sp"
+        android:textColor="@color/orange_button_rezult"
+        android:textColorHint="@color/orange_button_rezult"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText_rezult"
+        android:layout_width="277sp"
+        android:layout_height="48sp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="612dp"
+        android:background="@drawable/stily_blac_edit_text"
+        android:ems="10"
+        android:focusable="false"
+        android:hint="@string/hint_tezult_convert"
+        android:inputType="text"
+        android:paddingStart="14sp"
+        android:paddingEnd="8sp"
+        android:textColor="@color/orange_button_rezult"
+        android:textColorHint="@color/orange_button_rezult"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_calc_rezult"
+        android:layout_width="160sp"
+        android:layout_height="56sp"
+        android:layout_marginTop="688dp"
+        android:backgroundTint="@color/orange_button_rezult"
+        android:fontFamily="@font/open_sans_extrabold"
+        android:text="@string/rezult"
+        android:textSize="18sp"
+        app:cornerRadius="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="72sp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="136dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView_evro_bacgraund"
+            android:layout_width="72sp"
+            android:layout_height="72sp"
+            android:background="@drawable/style_cnvert_button" />
+
+        <TextView
+            android:id="@+id/textView_evro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28sp"
+            android:layout_marginTop="13sp"
+            android:layout_marginBottom="13sp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="@string/curs_evro"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="72sp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="244dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView_dolar_bacgraund"
+            android:layout_width="72sp"
+            android:layout_height="72sp"
+            android:background="@drawable/style_cnvert_button" />
+
+        <TextView
+            android:id="@+id/textView_dolar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28sp"
+            android:layout_marginTop="13sp"
+            android:layout_marginBottom="13sp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="@string/curs_dolar"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView_dolar_ico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="256dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image_dolar_ico" />
+
+    <ImageView
+        android:id="@+id/imageView_evro_ico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="152dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/image_evro_ico" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="72sp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="340dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView_yany_bacgraund"
+            android:layout_width="72sp"
+            android:layout_height="72sp"
+            android:background="@drawable/style_cnvert_button" />
+
+        <TextView
+            android:id="@+id/textView_yany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28sp"
+            android:layout_marginTop="13sp"
+            android:layout_marginBottom="13sp"
+            android:fontFamily="@font/open_sans_bold"
+            android:text="@string/curs_yanu"
+            android:textColor="@color/white"
+            android:textSize="40sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView_yany_ico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="360dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/image_yany_ico" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_medium"
+        android:text="Выберите валюту"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.57"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.094" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

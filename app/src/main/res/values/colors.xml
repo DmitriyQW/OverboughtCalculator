@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="contrast">#272727</color>
+    <color name="bg">#313131</color>
+    <color name="green">#E45EFF1A</color>
+    <color name="heder_bacgraund">#5A4E4E</color>
+    <color name="futer_bacgraund">#262626</color>
+    <color name="menu_navigation_futer">#A5FF6D</color>
+    <color name="vigodno_verdict">#7AFF5C</color>
+    <color name="no_vigodno_verdict">#F45539</color>
+    <color name="orange_button_rezult">#FF6F31</color>
+    <color name="bt_register_blue">#2663FF</color>
+    <color name="bt_convert">#262626</color>
+
+</resources>

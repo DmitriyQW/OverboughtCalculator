@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Калькулятор перекупа</string>
+    <string name="logo_text">Калькулятор перекупа</string>
+    <string name="rezult">РАСЧИТАТЬ</string>
+    <string name="zaplatil">Затраты :</string>
+    <string name="plus_steam">Доход :</string>
+    <string name="zist_pribil">Прибыль :</string>
+    <string name="kpd_vigodi">Кпд выгоды :</string>
+    <string name="exeption_date_input">Введите данные!</string>
+    <string name="currency">₽</string>
+    <string name="rezults_text">Итоги</string>
+    <string name="c_d_background">Задний фон</string>
+    <string name="profit_one_piece">Прибыль еденицы товара : </string>
+
+    <string name="c_d_bacgrund_futer">Задний фон названия</string>
+
+    <string name="t_neam">Название товара</string>
+    <string name="t_cost_bay">Стоимость покупки товара руб</string>
+    <string name="t_cost_sale">Стоимость продажи товара руб</string>
+    <string name="t_comsion_sale">Комиссия за продажу %</string>
+    <string name="t_count">Количество товаров шт</string>
+
+    <string name="neam">Ноутбук</string>
+    <string name="site_price">0 руб.</string>
+    <string name="auto_zak_steam">0 руб.</string>
+    <string name="commission_in_sale">0 %</string>
+    <string name="count_items">0 шт</string>
+
+    <string name="bt_valute">Кнопка валюты</string>
+    <string name="bt_histori">Кнопка история</string>
+    <string name="bt_main">Кнопка главная</string>
+
+
+    <string name="tp_logo_app">Логотип приложения</string>
+    
+
+
+    <string name="curs_dolar">91,21 ₽</string>
+    <string name="curs_evro">98,19 ₽</string>
+    <string name="curs_yanu">12,58 ₽</string>
+
+    <string name="valute_in_contert">Валюта для конвертации</string>
+    <string name="valute_to_convert">Валюта в которую  конвертируем</string>
+    <string name="rezult_contert">Результат</string>
+
+    <string name="hint_val_convert">128,82</string>
+    <string name="hint_tezult_convert">1,42</string>
+    <string name="convetirovat">Конвертировать</string>
+</resources>
