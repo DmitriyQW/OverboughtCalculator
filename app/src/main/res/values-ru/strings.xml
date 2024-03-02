@@ -36,9 +36,9 @@
     
 
 
-    <string name="curs_dolar">91,21 ₽</string>
-    <string name="curs_evro">98,19 ₽</string>
-    <string name="curs_yanu">12,58 ₽</string>
+    <string name="curs_dolar">91,33 ₽</string>
+    <string name="curs_evro">98,72 ₽</string>
+    <string name="curs_yanu">12,63 ₽</string>
 
     <string name="valute_in_contert">Валюта для конвертации</string>
     <string name="valute_to_convert">Валюта в которую  конвертируем</string>
