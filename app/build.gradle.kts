@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.overboughtcalculator"
+    namespace = "com.profitwizard.overboughtcalculator"
     compileSdk = 34
 
     buildFeatures{
@@ -12,7 +12,7 @@ android {
 
 
     defaultConfig {
-        applicationId = "com.example.overboughtcalculator"
+        applicationId = "com.profitwizard.overboughtcalculator"
         minSdk = 27
         targetSdk = 34
         versionCode = 1

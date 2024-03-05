@@ -1,4 +1,4 @@
-package com.example.overboughtcalculator;
+package com.profitwizard.overboughtcalculator;
 
 import android.content.Context;
 

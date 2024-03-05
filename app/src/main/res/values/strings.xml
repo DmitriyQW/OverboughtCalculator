@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Overbought Calculator</string>
+    <string name="app_name">ProfitWizard</string>
 
-    <string name="logo_text">Overbought Calculator</string>
+    <string name="logo_text">ProfitWizard</string>
 
     <string name="rezult">CALCULATE</string>
     <string name="zaplatil">Expenses :</string>
@@ -37,7 +37,6 @@
     <string name="tp_logo_app">Logo app</string>
 
 
-
     <string name="curs_dolar">91,33 ₽</string>
     <string name="curs_evro">98,72 ₽</string>
     <string name="curs_yanu">12,63 ₽</string>
@@ -49,4 +48,5 @@
     <string name="hint_tezult_convert">1,42</string>
     <string name="convetirovat">Convert</string>
 
+    <string name="text_warning">Currencies are still static</string>
 </resources>

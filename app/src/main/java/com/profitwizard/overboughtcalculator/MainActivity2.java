@@ -1,4 +1,4 @@
-package com.example.overboughtcalculator;
+package com.profitwizard.overboughtcalculator;
 
 import android.os.Bundle;
 import android.view.View;
@@ -7,7 +7,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
-import com.example.overboughtcalculator.databinding.ActivityMain2Binding;
+import com.profitwizard.overboughtcalculator.databinding.ActivityMain2Binding;
 
 
 public class MainActivity2 extends AppCompatActivity {

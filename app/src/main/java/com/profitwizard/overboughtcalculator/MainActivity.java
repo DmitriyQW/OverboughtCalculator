@@ -1,4 +1,4 @@
-package com.example.overboughtcalculator;
+package com.profitwizard.overboughtcalculator;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
-import com.example.overboughtcalculator.databinding.ActivityMainBinding;
+import com.profitwizard.overboughtcalculator.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -57,7 +57,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        bunding.imageButtonBtHistori.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,MainActivity3.class);
+                startActivity(intent);
+            }
+        });
         button_rezult.setOnClickListener(new View.OnClickListener() { //Кнопка чтобы узнать результат
             @Override
             public void onClick(View v) {

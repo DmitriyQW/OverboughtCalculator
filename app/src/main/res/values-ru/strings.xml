@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Калькулятор перекупа</string>
-    <string name="logo_text">Калькулятор перекупа</string>
+    <string name="app_name">Мастер получения прибыли</string>
+    <string name="logo_text">Мастер получения прибыли</string>
     <string name="rezult">РАСЧИТАТЬ</string>
     <string name="zaplatil">Затраты :</string>
     <string name="plus_steam">Доход :</string>
@@ -47,4 +47,6 @@
     <string name="hint_val_convert">128,82</string>
     <string name="hint_tezult_convert">1,42</string>
     <string name="convetirovat">Конвертировать</string>
+
+    <string name="text_warning">Валюты пока что являются статичными</string>
 </resources>
