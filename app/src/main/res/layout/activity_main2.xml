@@ -126,33 +126,12 @@
 
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/editTextText_rezult"
-        android:layout_width="277sp"
-        android:layout_height="48sp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="636dp"
-        android:background="@drawable/stily_blac_edit_text"
-        android:ems="10"
-        android:focusable="false"
-        android:hint="@string/hint_tezult_convert"
-        android:inputType="text"
-        android:paddingStart="14sp"
-        android:paddingEnd="8sp"
-        android:textColor="@color/orange_button_rezult"
-        android:textColorHint="@color/orange_button_rezult"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/inter_medium"
-        android:text="Выберите валюту"
+        android:text="@string/select_currency"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -199,7 +178,7 @@
         android:layout_marginTop="508dp"
         android:background="@drawable/stily_blac_edit_text"
         android:ems="10"
-        android:hint="@string/hint_val_convert"
+        android:hint="00000 руб."
         android:inputType="number|numberDecimal"
         android:paddingStart="14sp"
         android:paddingEnd="8sp"
@@ -281,5 +260,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/image_evro_ico" />
+
+    <TextView
+        android:id="@+id/textView_rezult_calcule"
+        android:layout_width="277sp"
+        android:layout_height="48sp"
+        android:layout_marginStart="25dp"
+        android:background="@drawable/stily_blac_edit_text"
+        android:fontFamily="@font/open_sans_semibold"
+        android:paddingStart="12sp"
+        android:paddingTop="9sp"
+        android:text="00000 $"
+        android:textColor="@color/orange_button_rezult"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.754" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

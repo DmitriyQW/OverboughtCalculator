@@ -40,7 +40,7 @@
     <string name="curs_evro">98,72 ₽</string>
     <string name="curs_yanu">12,63 ₽</string>
 
-    <string name="valute_in_contert">Валюта для конвертации</string>
+    <string name="valute_in_contert">Валюта для конвертации руб</string>
     <string name="valute_to_convert">Валюта в которую  конвертируем</string>
     <string name="rezult_contert">Результат</string>
 
@@ -49,4 +49,6 @@
     <string name="convetirovat">Конвертировать</string>
 
     <string name="text_warning">Валюты пока что являются статичными</string>
+
+    <string name="select_currency">Выберите валюту</string>
 </resources>

@@ -25,6 +25,9 @@ public class MainActivity extends AppCompatActivity {
     private TextView textView_expenses,textView_income,textView_profit,textView_benefit_ratio;
 
 
+    private int priceinztrati;
+    private int priceincaunt;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
@@ -104,26 +107,27 @@ public class MainActivity extends AppCompatActivity {
                     if (!bunding.editTextTextCount.getText().toString().isEmpty()){
                         if (Float.parseFloat(bunding.editTextTextCount.getText().toString()) != 0) {
                             float count = Float.parseFloat(bunding.editTextTextCount.getText().toString());
+                            priceinztrati = Math.round(price_site*count);
                             bunding.textViewProfitIetem.setText(getString(R.string.profit_one_piece)+" "+String.valueOf(Math.round(pribil))+" "+ getString(R.string.currency));
-                            textView_expenses.setText(textView_expenses.getText().toString() + " " + String.valueOf(Math.round(price_site*count)) +" "+ getString(R.string.currency));
+                            textView_expenses.setText(textView_expenses.getText().toString() + " " + String.valueOf(priceinztrati) +" "+ getString(R.string.currency));
                             textView_income.setText(textView_income.getText().toString() + " " + String.valueOf(Math.round(moni_in_steam*count)) +" "+ getString(R.string.currency));
-                            textView_profit.setText(textView_profit.getText().toString() + " " + String.valueOf(Math.round(pribil*count)) +" "+ getString(R.string.currency));
+                            priceincaunt = Math.round(pribil*count);
+                            textView_profit.setText(textView_profit.getText().toString() + " " + String.valueOf(priceincaunt) +" "+ getString(R.string.currency));
                         }
                     }
                     else {
                         //Вывод пользователю +
+                        priceinztrati = 0;
+                        priceincaunt = 0;
                         bunding.textViewProfitIetem.setText(getString(R.string.profit_one_piece)+" "+String.valueOf(Math.round(pribil))+" "+ getString(R.string.currency));
                         textView_expenses.setText(textView_expenses.getText().toString() + " " + String.valueOf(Math.round(price_site)) +" "+ getString(R.string.currency));
                         textView_income.setText(textView_income.getText().toString() + " " + String.valueOf(Math.round(moni_in_steam)) +" "+ getString(R.string.currency));
                         textView_profit.setText(textView_profit.getText().toString() + " " + String.valueOf(Math.round(pribil)) +" "+ getString(R.string.currency));
                     }
 
-
-
-
-
+                    showInfo(String.valueOf(priceincaunt));
                     //Проверка выгодно или нет и отоброжение пользователю в соответстие с выгодой +
-                    if (Math.round(((pribil / price_site) * 100)) >= 10) {
+                    if (Math.round(((pribil / price_site) * 100)) >= 10 || priceincaunt>=5000 || pribil>=1000) {
                         textView_benefit_ratio.setTextColor(getColor(R.color.vigodno_verdict));
                         textView_benefit_ratio.setText(textView_benefit_ratio.getText().toString() + " " + String.valueOf(Math.round((pribil / price_site) * 100)) + " %");
                     } else {

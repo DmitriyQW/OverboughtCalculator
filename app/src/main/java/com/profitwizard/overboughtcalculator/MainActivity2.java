@@ -73,16 +73,16 @@ public class MainActivity2 extends AppCompatActivity {
                showInfo("Выберете валюту ");
             } else if (onclicDolar == true) {
                 Double rezconvertDolar = Float.parseFloat(bunding2.editTextTextInConvert.getText().toString()) / 91.33;
-                String rezultDolar = String.format("%.2f",rezconvertDolar) ;
-                bunding2.editTextTextRezult.setText(rezultDolar);
+                String rezultDolar = String.format("%.2f",rezconvertDolar) + " $" ;
+                bunding2.textViewRezultCalcule.setText(rezultDolar);
             }else if (onclicEvro == true) {
                 Double rezconvertEvro = Float.parseFloat(bunding2.editTextTextInConvert.getText().toString()) / 98.72;
-                String rezultEvro = String.format("%.2f",rezconvertEvro) ;
-                bunding2.editTextTextRezult.setText(rezultEvro);
+                String rezultEvro = String.format("%.2f",rezconvertEvro) + " €" ;
+                bunding2.textViewRezultCalcule.setText(rezultEvro);
             }else if (onclicYany == true) {
                 Double rezconvertYany = Float.parseFloat(bunding2.editTextTextInConvert.getText().toString()) / 12.63;
-                String rezultYany = String.format("%.2f",rezconvertYany) ;
-                bunding2.editTextTextRezult.setText(rezultYany);
+                String rezultYany = String.format("%.2f",rezconvertYany) + " ¥";
+                bunding2.textViewRezultCalcule.setText(rezultYany);
             }
 
         }
