@@ -72,15 +72,15 @@ public class MainActivity2 extends AppCompatActivity {
             if (onclicDolar  == false & onclicEvro == false & onclicYany == false){
                showInfo("Выберете валюту ");
             } else if (onclicDolar == true) {
-                Double rezconvertDolar = Float.parseFloat(bunding2.editTextTextInConvert.getText().toString()) / 91.33;
+                Double rezconvertDolar = Float.parseFloat(bunding2.editTextTextInConvert.getText().toString()) / 92.45;
                 String rezultDolar = String.format("%.2f",rezconvertDolar) + " $" ;
                 bunding2.textViewRezultCalcule.setText(rezultDolar);
             }else if (onclicEvro == true) {
-                Double rezconvertEvro = Float.parseFloat(bunding2.editTextTextInConvert.getText().toString()) / 98.72;
+                Double rezconvertEvro = Float.parseFloat(bunding2.editTextTextInConvert.getText().toString()) / 99.85;
                 String rezultEvro = String.format("%.2f",rezconvertEvro) + " €" ;
                 bunding2.textViewRezultCalcule.setText(rezultEvro);
             }else if (onclicYany == true) {
-                Double rezconvertYany = Float.parseFloat(bunding2.editTextTextInConvert.getText().toString()) / 12.63;
+                Double rezconvertYany = Float.parseFloat(bunding2.editTextTextInConvert.getText().toString()) / 13.03;
                 String rezultYany = String.format("%.2f",rezconvertYany) + " ¥";
                 bunding2.textViewRezultCalcule.setText(rezultYany);
             }

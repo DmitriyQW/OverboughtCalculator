@@ -37,9 +37,9 @@
     <string name="tp_logo_app">Logo app</string>
 
 
-    <string name="curs_dolar">91,33 ₽</string>
-    <string name="curs_evro">98,72 ₽</string>
-    <string name="curs_yanu">12,63 ₽</string>
+    <string name="curs_dolar">92.45 ₽</string>
+    <string name="curs_evro">99.85 ₽</string>
+    <string name="curs_yanu">13.03 ₽</string>
     <string name="valute_in_contert">Currency to convert rub</string>
     <string name="valute_to_convert">The currency to convert to</string>
     <string name="rezult_contert">Result</string>

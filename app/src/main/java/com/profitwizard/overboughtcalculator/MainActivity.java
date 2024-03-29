@@ -125,7 +125,6 @@ public class MainActivity extends AppCompatActivity {
                         textView_profit.setText(textView_profit.getText().toString() + " " + String.valueOf(Math.round(pribil)) +" "+ getString(R.string.currency));
                     }
 
-                    showInfo(String.valueOf(priceincaunt));
                     //Проверка выгодно или нет и отоброжение пользователю в соответстие с выгодой +
                     if (Math.round(((pribil / price_site) * 100)) >= 10 || priceincaunt>=5000 || pribil>=1000) {
                         textView_benefit_ratio.setTextColor(getColor(R.color.vigodno_verdict));

@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    app:circularflow_defaultRadius="12sp"
+    app:circularflow_radiusInDP="12sp"
+    tools:context=".MainActivity3">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="45sp"
+        android:contentDescription="@string/c_d_bacgrund_futer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@color/futer_bacgraund" />
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="222sp"
+        android:layout_height="60sp"
+        android:contentDescription="@string/tp_logo_app"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_logo_new" />
+
+    <ScrollView
+        android:layout_width="374dp"
+        android:layout_height="650dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="1dp"
+            android:background="@drawable/style_histori_down"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="374sp"
+                android:layout_height="45sp"
+                android:background="@drawable/style_history_up"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14sp"
+                    android:layout_marginTop="10sp"
+                    android:layout_marginEnd="9sp"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="Дата :"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10sp"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="10.02.2024"
+                    android:textColor="#FFEE55"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_neam_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14sp"
+                android:layout_marginTop="6sp"
+                android:layout_marginEnd="5sp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="Название товара : Чехлы"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView_by_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14sp"
+                android:layout_marginTop="6sp"
+                android:layout_marginEnd="5sp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="Стоимость покупки товара : 320 руб."
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView_sale_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14sp"
+                android:layout_marginTop="6sp"
+                android:layout_marginEnd="5sp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="Стоимость продажи товара : 520 руб. "
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView_comission_sale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14sp"
+                android:layout_marginTop="6sp"
+                android:layout_marginEnd="5sp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="Комиссия за продажу : 13 %"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/textView_count_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14sp"
+                android:layout_marginTop="6sp"
+                android:layout_marginEnd="5sp"
+                android:fontFamily="@font/open_sans_semibold"
+                android:text="Количество товаров : 20 шт"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/imageView_poin"
+                android:layout_width="340sp"
+                android:layout_height="4sp"
+                android:layout_marginStart="14sp"
+                android:layout_marginTop="8sp"
+                app:srcCompat="@drawable/stily_select_butthon" />
+
+            <LinearLayout
+                android:layout_width="374sp"
+                android:layout_height="25sp"
+                android:layout_marginStart="14sp"
+                android:layout_marginTop="6sp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView_profit_imetm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="Прибыль единицы товара :"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView_rez_profit_item"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="132 руб."
+                    android:textColor="#FF6F31"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="375sp"
+                android:layout_height="25sp"
+                android:layout_marginStart="14sp"
+                android:layout_marginTop="6sp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView_zatrati"
+                    android:layout_width="1sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="Затраты :"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView_rez_zatrati"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="6400 руб."
+                    android:textColor="#FF6F31"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="375sp"
+                android:layout_height="25sp"
+                android:layout_marginStart="14sp"
+                android:layout_marginTop="6sp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView_dohod"
+                    android:layout_width="1sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="Доход :"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView_rez_doxod"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="9048 руб."
+                    android:textColor="#FF6F31"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="375sp"
+                android:layout_height="25sp"
+                android:layout_marginStart="14sp"
+                android:layout_marginTop="6sp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView_profit"
+                    android:layout_width="1sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="Прибыль :"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView_rez_profit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="2648 руб."
+                    android:textColor="#FF6F31"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="375sp"
+                android:layout_height="25sp"
+                android:layout_marginStart="14sp"
+                android:layout_marginTop="6sp"
+                android:layout_marginBottom="8sp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView_kpd_vigidi"
+                    android:layout_width="1sp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="Кпд выгоды :"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView_rez_vigodi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/open_sans_semibold"
+                    android:text="41 %"
+                    android:textColor="#3DFF50"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="История"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.084" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
