@@ -1,4 +1,4 @@
-package com.profitwizard.overboughtcalculator;
+package com.tradecalc.lernjava;
 
 import org.junit.Test;
 

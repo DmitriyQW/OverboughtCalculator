@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.profitwizard.overboughtcalculator"
+    namespace = "com.tradecalc.lernjava"
     compileSdk = 34
 
     buildFeatures{
@@ -12,11 +12,11 @@ android {
 
 
     defaultConfig {
-        applicationId = "com.profitwizard.overboughtcalculator"
+        applicationId = "com.tradecalc.lernjava"
         minSdk = 27
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 2
+        versionName = "1.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

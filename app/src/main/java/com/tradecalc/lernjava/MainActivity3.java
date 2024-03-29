@@ -1,15 +1,11 @@
-package com.profitwizard.overboughtcalculator;
+package com.tradecalc.lernjava;
 
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
-import com.profitwizard.overboughtcalculator.databinding.ActivityMain3Binding;
+import com.tradecalc.lernjava.databinding.ActivityMain3Binding;
 
 public class MainActivity3 extends AppCompatActivity {
     private ActivityMain3Binding bunding3;
