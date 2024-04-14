@@ -7,6 +7,19 @@
     android:background="@color/bg"
     tools:context=".MainActivity2">
 
+    <ImageButton
+        android:id="@+id/imageButton_actual_valute"
+        android:layout_width="65dp"
+        android:layout_height="56dp"
+        android:background="@drawable/stily_select_butthon"
+        android:src="@drawable/valuet_replay"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.909" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
@@ -35,28 +48,109 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.113" />
+
+    <EditText
+        android:id="@+id/editTextText_in_convert"
+        android:layout_width="277sp"
+        android:layout_height="48sp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="524dp"
+        android:background="@drawable/stily_blac_edit_text"
+        android:ems="10"
+        android:hint="00000 руб."
+        android:inputType="number|numberDecimal"
+        android:paddingStart="14sp"
+        android:paddingEnd="8sp"
+        android:textColor="@color/orange_button_rezult"
+        android:textColorHint="@color/orange_button_rezult"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView_text_warning"
+        android:id="@+id/textView_in_convert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="476dp"
         android:fontFamily="@font/open_sans_semibold"
-        android:text="@string/text_warning"
-        android:textColor="@color/orange_button_rezult"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        android:text="@string/valute_in_contert"
+        android:textColor="@color/white"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.579"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout_dolar"
+        android:layout_width="wrap_content"
+        android:layout_height="72sp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="284dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView_dolar_bacgraund"
+            android:layout_width="72sp"
+            android:layout_height="72sp"
+            android:background="@drawable/style_cnvert_button" />
+
+        <TextView
+            android:id="@+id/textView_dolar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28sp"
+            android:layout_marginTop="13sp"
+            android:layout_marginBottom="13sp"
+            android:fontFamily="@font/open_sans_bold"
+            android:hint="@string/curs_dolar"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="40sp" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView_dolar_ico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="296dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.862" />
+        app:srcCompat="@drawable/image_dolar_ico" />
+
+    <TextView
+        android:id="@+id/textView_rezult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="604dp"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="@string/rezult_contert"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout_yan"
         android:layout_width="wrap_content"
         android:layout_height="72sp"
         android:layout_marginStart="90dp"
-        android:layout_marginTop="364dp"
+        android:layout_marginTop="380dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -79,51 +173,7 @@
             android:fontFamily="@font/open_sans_bold"
             android:text="@string/curs_yanu"
             android:textColor="@color/white"
-            android:textSize="40sp" />
-
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageViewLogo"
-        android:layout_width="222sp"
-        android:layout_height="60sp"
-        android:contentDescription="@string/tp_logo_app"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ic_logo_new" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout_dolar"
-        android:layout_width="wrap_content"
-        android:layout_height="72sp"
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="268dp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageView
-            android:id="@+id/imageView_dolar_bacgraund"
-            android:layout_width="72sp"
-            android:layout_height="72sp"
-            android:background="@drawable/style_cnvert_button" />
-
-        <TextView
-            android:id="@+id/textView_dolar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="28sp"
-            android:layout_marginTop="13sp"
-            android:layout_marginBottom="13sp"
-            android:fontFamily="@font/open_sans_bold"
-            android:text="@string/curs_dolar"
-            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             android:textSize="40sp" />
 
     </LinearLayout>
@@ -141,90 +191,14 @@
         app:layout_constraintHorizontal_bias="0.57"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.124" />
-
-    <TextView
-        android:id="@+id/textView_in_convert"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="460dp"
-        android:fontFamily="@font/open_sans_semibold"
-        android:text="@string/valute_in_contert"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView_yany_ico"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="114dp"
-        android:layout_marginTop="360dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.052"
-        app:srcCompat="@drawable/image_yany_ico" />
-
-    <EditText
-        android:id="@+id/editTextText_in_convert"
-        android:layout_width="277sp"
-        android:layout_height="48sp"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="508dp"
-        android:background="@drawable/stily_blac_edit_text"
-        android:ems="10"
-        android:hint="00000 руб."
-        android:inputType="number|numberDecimal"
-        android:paddingStart="14sp"
-        android:paddingEnd="8sp"
-        android:textColor="@color/orange_button_rezult"
-        android:textColorHint="@color/orange_button_rezult"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView_rezult"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="588dp"
-        android:fontFamily="@font/open_sans_semibold"
-        android:text="@string/rezult_contert"
-        android:textColor="@color/white"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView_dolar_ico"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="114dp"
-        android:layout_marginTop="280dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/image_dolar_ico" />
+        app:layout_constraintVertical_bias="0.142" />
 
     <LinearLayout
         android:id="@+id/linearLayout_evro"
         android:layout_width="wrap_content"
         android:layout_height="72sp"
         android:layout_marginStart="90dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="176dp"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -245,18 +219,33 @@
             android:layout_marginTop="13sp"
             android:layout_marginBottom="13sp"
             android:fontFamily="@font/open_sans_bold"
-            android:text="@string/curs_evro"
+            android:hint="@string/curs_evro"
             android:textColor="@color/white"
+            android:textColorHint="@color/white"
             android:textSize="40sp" />
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView_yany_ico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="114dp"
+        android:layout_marginTop="360dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.084"
+        app:srcCompat="@drawable/image_yany_ico" />
 
     <ImageView
         android:id="@+id/imageView_evro_ico"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="114dp"
-        android:layout_marginTop="176dp"
+        android:layout_marginTop="192dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -281,6 +270,34 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.077" />
+
+    <TextView
+        android:id="@+id/textView_text_warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/open_sans_semibold"
+        android:text="@string/text_warning"
+        android:textColor="@color/orange_button_rezult"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.579"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.689" />
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="222sp"
+        android:layout_height="60sp"
+        android:contentDescription="@string/tp_logo_app"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ic_logo_new" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
