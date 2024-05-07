@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageButton imageButton_bt_valutes;
     private TextView textView_expenses,textView_income,textView_profit,textView_benefit_ratio;
 
-
+    private float old_cost;
     private int priceinztrati;
     private int priceincaunt;
 
@@ -51,7 +51,13 @@ public class MainActivity extends AppCompatActivity {
         imageButton_bt_valutes = bunding.imageButtonBtValutes;
 
 
-
+        bunding.imageButtonBtStocks.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,MainActivity4.class);
+                startActivity(intent);
+            }
+        });
         imageButton_bt_valutes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -73,6 +79,14 @@ public class MainActivity extends AppCompatActivity {
                 if (editText_cost_unit_goods.getText().toString().isEmpty() || editText_cost_implementation.getText().toString().isEmpty()){
                     showInfo(getString(R.string.exeption_date_input));
                 }else {
+
+                    if (String.valueOf(bunding.editTextTextOldCosts.getText().toString()).isEmpty() != true) {
+                        if (Float.parseFloat(bunding.editTextTextOldCosts.getText().toString()) != 0){
+                            old_cost = Float.parseFloat(bunding.editTextTextOldCosts.getText().toString());
+                        }
+                    }else {
+                        old_cost = 0;
+                    }
                     //Обнуление старых просчётов +
 
                     textView_expenses.setText(getString(R.string.zaplatil));
@@ -81,12 +95,10 @@ public class MainActivity extends AppCompatActivity {
                     textView_benefit_ratio.setText(getString(R.string.kpd_vigodi));
 
 
-
                     //Вычесления +
                     float price_site = Float.parseFloat(editText_cost_unit_goods.getText().toString());
                     float steam_auto = Float.parseFloat(editText_cost_implementation.getText().toString());
                     float moni_in_steam;
-
 
 
                     //Комисия на продажу +
@@ -103,11 +115,14 @@ public class MainActivity extends AppCompatActivity {
 
                     float pribil = moni_in_steam - price_site;
 
-
                     if (!bunding.editTextTextCount.getText().toString().isEmpty()){
-                        if (Float.parseFloat(bunding.editTextTextCount.getText().toString()) != 0) {
+                        if (Float.parseFloat(bunding.editTextTextCount.getText().toString()) > 0) {
                             float count = Float.parseFloat(bunding.editTextTextCount.getText().toString());
-                            priceinztrati = Math.round(price_site*count);
+                            if (old_cost > 0){
+                                priceinztrati = (int) ((Math.round(price_site*count))+old_cost);
+                            }else {
+                                priceinztrati = (Math.round(price_site*count));
+                            }
                             bunding.textViewProfitIetem.setText(getString(R.string.profit_one_piece)+" "+String.valueOf(Math.round(pribil))+" "+ getString(R.string.currency));
                             textView_expenses.setText(textView_expenses.getText().toString() + " " + String.valueOf(priceinztrati) +" "+ getString(R.string.currency));
                             textView_income.setText(textView_income.getText().toString() + " " + String.valueOf(Math.round(moni_in_steam*count)) +" "+ getString(R.string.currency));
@@ -116,13 +131,16 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                     else {
-                        //Вывод пользователю +
-                        priceinztrati = 0;
-                        priceincaunt = 0;
+                        if (old_cost > 0){
+                            priceinztrati = (int) ((Math.round(price_site))+old_cost);
+                        }else {
+                            priceinztrati = (Math.round(price_site));
+                        }
                         bunding.textViewProfitIetem.setText(getString(R.string.profit_one_piece)+" "+String.valueOf(Math.round(pribil))+" "+ getString(R.string.currency));
-                        textView_expenses.setText(textView_expenses.getText().toString() + " " + String.valueOf(Math.round(price_site)) +" "+ getString(R.string.currency));
+                        textView_expenses.setText(textView_expenses.getText().toString() + " " + String.valueOf(priceinztrati) +" "+ getString(R.string.currency));
                         textView_income.setText(textView_income.getText().toString() + " " + String.valueOf(Math.round(moni_in_steam)) +" "+ getString(R.string.currency));
-                        textView_profit.setText(textView_profit.getText().toString() + " " + String.valueOf(Math.round(pribil)) +" "+ getString(R.string.currency));
+                        priceincaunt = Math.round(pribil);
+                        textView_profit.setText(textView_profit.getText().toString() + " " + String.valueOf(priceincaunt) +" "+ getString(R.string.currency));
                     }
 
                     //Проверка выгодно или нет и отоброжение пользователю в соответстие с выгодой +

@@ -1,5 +1,9 @@
 package com.tradecalc.lernjava;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -20,25 +24,39 @@ import java.io.IOException;
 
 public class MainActivity2 extends AppCompatActivity {
 
+    private final String key_curs_evro = "key_evro",key_curs_dolar = "key_dolar",key_curs_yan = "key_yan";
+    private SharedPreferences pref;
     private Document doc = null;
-    private Thread secThread;
-    private  Runnable runnable;
     private  ActivityMain2Binding bunding2;
     private boolean onclicEvro = false;
     private boolean onclicDolar = false;
     private boolean onclicYany = false;
-
     private String evro_curse,dolar_curse,yuan_curse;
     private float curse_evor,curse_dolar,curse_yan;
 
     private String curse_dolar_format,curse_evor_format,curse_yan_format;
+    MyAsyncTask task;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         super.onCreate(savedInstanceState);
         bunding2 = ActivityMain2Binding.inflate(getLayoutInflater());
         setContentView(bunding2.getRoot());
+        initpref();
 
+        //Старый курс
+        bunding2.textViewTextWarning.setText(getString(R.string.text_warning_start_lod));
+        bunding2.textViewTextWarning.setVisibility(View.VISIBLE);
+
+        //Устоновка старого курса
+        curse_dolar = pref.getFloat(key_curs_dolar,0);
+        curse_evor = pref.getFloat(key_curs_evro,0);
+        curse_yan = pref.getFloat(key_curs_yan,0);
+
+        bunding2.textViewDolar.setText(String.valueOf(pref.getFloat(key_curs_dolar,0)));
+        bunding2.textViewEvro.setText(String.valueOf(pref.getFloat(key_curs_evro,0)));
+        bunding2.textViewYany.setText(String.valueOf(pref.getFloat(key_curs_yan,0)));
+        task = new MyAsyncTask();
 
         bunding2.imageViewEvroBacgraund.setOnClickListener(new View.OnClickListener() {
         @Override
@@ -82,56 +100,53 @@ public class MainActivity2 extends AppCompatActivity {
     bunding2.buttonCalcRezult.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            if (onclicDolar  == false & onclicEvro == false & onclicYany == false){
-               showInfo("Выберете валюту ");
-            } else if (onclicDolar == true) {
-                Double rezconvertDolar = (double) (Float.parseFloat(bunding2.editTextTextInConvert.getText().toString()) / curse_dolar);
-                String rezultDolar = String.format("%.2f",rezconvertDolar) + " $" ;
-                bunding2.textViewRezultCalcule.setText(rezultDolar);
-            }else if (onclicEvro == true) {
-                Double rezconvertEvro = (double) (Float.parseFloat(bunding2.editTextTextInConvert.getText().toString()) / curse_evor);
-                String rezultEvro = String.format("%.2f",rezconvertEvro) + " €" ;
-                bunding2.textViewRezultCalcule.setText(rezultEvro);
-            }else if (onclicYany == true) {
-                Double rezconvertYany = (double) (Float.parseFloat(bunding2.editTextTextInConvert.getText().toString()) / curse_yan);
-                String rezultYany = String.format("%.2f",rezconvertYany) + " ¥";
-                bunding2.textViewRezultCalcule.setText(rezultYany);
+            if (bunding2.editTextTextInConvert.getText().toString().isEmpty() != true){
+                if (onclicDolar  == false & onclicEvro == false & onclicYany == false){
+                    showInfo("Выберете валюту ");
+                } else if (onclicDolar == true) {
+                    Double rezconvertDolar = (double) (Float.parseFloat(bunding2.editTextTextInConvert.getText().toString()) / curse_dolar);
+                    String rezultDolar = String.format("%.2f",rezconvertDolar) + " $" ;
+                    bunding2.textViewRezultCalcule.setText(rezultDolar);
+                }else if (onclicEvro == true) {
+                    Double rezconvertEvro = (double) (Float.parseFloat(bunding2.editTextTextInConvert.getText().toString()) / curse_evor);
+                    String rezultEvro = String.format("%.2f",rezconvertEvro) + " €" ;
+                    bunding2.textViewRezultCalcule.setText(rezultEvro);
+                }else if (onclicYany == true) {
+                    Double rezconvertYany = (double) (Float.parseFloat(bunding2.editTextTextInConvert.getText().toString()) / curse_yan);
+                    String rezultYany = String.format("%.2f",rezconvertYany) + " ¥";
+                    bunding2.textViewRezultCalcule.setText(rezultYany);
+                }
+            }else {
+                showInfo("Введите колчество валюты для конвентации");
             }
-
         }
     });
-bunding2.imageButtonActualValute.setOnClickListener(new View.OnClickListener() {
+    bunding2.imageButtonActualValute.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
-        init();
-            bunding2.textViewDolar.setText(String.valueOf(curse_dolar_format));
-            bunding2.textViewEvro.setText(String.valueOf(curse_evor_format));
-            bunding2.textViewYany.setText(String.valueOf(curse_yan_format));
-            showInfo("Курс влюты обнавлён !");
+        if (!isOnline()){
+            //Если нет интернета
+            bunding2.textViewTextWarning.setText(getString(R.string.text_warning));
+            bunding2.textViewTextWarning.setVisibility(View.VISIBLE);
 
-            if (dolar_curse != null & evro_curse != null & yuan_curse != null){
+            //Устоновка старого курса
+            curse_dolar = pref.getFloat(key_curs_dolar,0);
+            curse_evor = pref.getFloat(key_curs_evro,0);
+            curse_yan = pref.getFloat(key_curs_yan,0);
 
-                dolar_curse = dolar_curse.replace(",",".");
-                evro_curse = evro_curse.replace(",",".");
-                yuan_curse = yuan_curse.replace(",",".");
+            bunding2.textViewDolar.setText(String.valueOf(pref.getFloat(key_curs_dolar,0)));
+            bunding2.textViewEvro.setText(String.valueOf(pref.getFloat(key_curs_evro,0)));
+            bunding2.textViewYany.setText(String.valueOf(pref.getFloat(key_curs_yan,0)));
 
-                curse_dolar = Float.parseFloat(dolar_curse);
-                curse_evor = Float.parseFloat(evro_curse);
-                curse_yan = Float.parseFloat(yuan_curse);
-
-                curse_dolar_format = String.format("%.2f",curse_dolar);
-                curse_evor_format = String.format("%.2f",curse_evor);
-                curse_yan_format = String.format("%.2f",curse_yan);
-
-                curse_dolar = Float.parseFloat(dolar_curse);
-                curse_evor = Float.parseFloat(evro_curse);
-                curse_yan = Float.parseFloat(yuan_curse);
+        }else {
+            if (task.getStatus() != AsyncTask.Status.RUNNING){
+                bunding2.textViewTextWarning.setVisibility(View.GONE);
+                task.execute();
             }
-//            if (doc != null){
-//                curse_dolar = Float.parseFloat(dolar_curse);
-//                curse_evor = Float.parseFloat(evro_curse);
-//                curse_yan = Float.parseFloat(yuan_curse);
-//            }
+            else {
+                showInfo("Уже выполняется");
+            }
+        }
     }
 });
 }
@@ -139,16 +154,6 @@ bunding2.imageButtonActualValute.setOnClickListener(new View.OnClickListener() {
         Toast.makeText(this,text,Toast.LENGTH_SHORT).show();
     }
 
-    private void init(){
-        runnable = new Runnable() {
-            @Override
-            public void run() {
-                getweb();
-            }
-        };
-        secThread = new Thread(runnable);
-        secThread.start();
-    }
     private void getweb(){
         try {
             doc = Jsoup.connect("https://cbr.ru/currency_base/daily/").get();
@@ -173,7 +178,6 @@ bunding2.imageButtonActualValute.setOnClickListener(new View.OnClickListener() {
             evro_curse = String.valueOf(evro_cheldren.get(4).text());
             yuan_curse = String.valueOf(yan_cheldren.get(4).text());
 
-
 //            Log.d("title","Зоголовок : "+doc.title());
 //            Log.d("text",doc.text());
 //            Log.d("size",String.valueOf(tables.get(0).text()));
@@ -189,4 +193,54 @@ bunding2.imageButtonActualValute.setOnClickListener(new View.OnClickListener() {
             throw new RuntimeException(e);
         }
     }
+    private void initpref(){
+        pref = getSharedPreferences("Valute",MODE_PRIVATE);
+    }
+    private boolean isOnline(){
+        String cs = Context.CONNECTIVITY_SERVICE;
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(cs);
+        if (cm.getActiveNetworkInfo() == null){
+            return false;
+        }else {
+            return true;
+        }
+    }
+    class MyAsyncTask extends AsyncTask<Void,Void,Void>{
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            getweb();
+            dolar_curse = dolar_curse.replace(",",".");
+            evro_curse = evro_curse.replace(",",".");
+            yuan_curse = yuan_curse.replace(",",".");
+
+            curse_dolar = Float.parseFloat(dolar_curse);
+            curse_evor = Float.parseFloat(evro_curse);
+            curse_yan = Float.parseFloat(yuan_curse);
+
+            curse_dolar_format = String.format("%.2f",curse_dolar);
+            curse_evor_format = String.format("%.2f",curse_evor);
+            curse_yan_format = String.format("%.2f",curse_yan);
+
+            curse_dolar = Float.parseFloat(dolar_curse);
+            curse_evor = Float.parseFloat(evro_curse);
+            curse_yan = Float.parseFloat(yuan_curse);
+
+            SharedPreferences.Editor edit = pref.edit();
+            edit.putFloat(key_curs_dolar,curse_dolar);
+            edit.putFloat(key_curs_evro,curse_evor);
+            edit.putFloat(key_curs_yan,curse_yan);
+            edit.apply();
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void unused) {
+            bunding2.textViewDolar.setText(String.valueOf(curse_dolar_format));
+            bunding2.textViewEvro.setText(String.valueOf(curse_evor_format));
+            bunding2.textViewYany.setText(String.valueOf(curse_yan_format));
+            showInfo("Курс влюты обнавлён !");
+        }
+    }
 }
+

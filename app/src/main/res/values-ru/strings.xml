@@ -3,7 +3,7 @@
     <string name="app_name">Мастер получения прибыли</string>
     <string name="logo_text">Мастер получения прибыли</string>
     <string name="rezult">РАСЧИТАТЬ</string>
-    <string name="zaplatil">Затраты :</string>
+    <string name="zaplatil">Сумарные затраты :</string>
     <string name="plus_steam">Доход :</string>
     <string name="zist_pribil">Прибыль :</string>
     <string name="kpd_vigodi">Кпд выгоды :</string>
@@ -20,12 +20,23 @@
     <string name="t_cost_sale">Стоимость продажи товара руб</string>
     <string name="t_comsion_sale">Комиссия за продажу %</string>
     <string name="t_count">Количество товаров шт</string>
+    <string name="t_imageButton_actual_valute">Кнопка для объявления курса валют</string>
+
+    <string name="t_bt_imageView_evro_bacgraund">Кнопка евро</string>
+    <string name="t_bt_imageView_yany_bacgraund">Кнопка юань</string>
+    <string name="t_bt_imageView_dolar_bacgraund">Кнопка долар</string>
+
+    <string name="t_imageView_evro_bacgraund">Иконка евро</string>
+    <string name="t_imageView_yany_bacgraund">Иконка юань</string>
+    <string name="t_imageView_dolar_ico">Иконка долора</string>
 
     <string name="neam">Ноутбук</string>
     <string name="site_price">0 руб.</string>
     <string name="auto_zak_steam">0 руб.</string>
     <string name="commission_in_sale">0 %</string>
     <string name="count_items">0 шт</string>
+    <string name="null_valute_rub">00000 руб.</string>
+    <string name="null_valute_dolar">00000 $</string>
 
     <string name="bt_valute">Кнопка валюты</string>
     <string name="bt_histori">Кнопка история</string>
@@ -48,7 +59,8 @@
     <string name="hint_tezult_convert">1,42</string>
     <string name="convetirovat">Конвертировать</string>
 
-    <string name="text_warning">Валюты пока что являются статичными</string>
-
+    <string name="text_warning">Нет подключения к интернету валюты являются статичными полключите интернет</string>
+    <string name="text_warning_start_lod">Обновите курс валют для болие точного значения !</string>
     <string name="select_currency">Выберите валюту</string>
+    <string name="old_costs">Сторонние затраты руб.</string>
 </resources>

@@ -4,7 +4,7 @@
     <string name="logo_text">ProfitWizard</string>
 
     <string name="rezult">CALCULATE</string>
-    <string name="zaplatil">Expenses :</string>
+    <string name="zaplatil">Total costs:</string>
     <string name="plus_steam">Income :</string>
     <string name="zist_pribil">Profit :</string>
     <string name="kpd_vigodi">Efficiency benefits:</string>
@@ -22,12 +22,24 @@
     <string name="t_cost_sale">Cost of sale of goods rub</string>
     <string name="t_comsion_sale">Sales commission %</string>
     <string name="t_count">Quantity of goods pc</string>
+    <string name="t_imageButton_actual_valute">Button to announce exchange rates</string>
+
+
+    <string name="t_bt_imageView_evro_bacgraund">Button euro</string>
+    <string name="t_bt_imageView_yany_bacgraund">Button yuan</string>
+    <string name="t_bt_imageView_dolar_bacgraund">Button dolar</string>
+
+    <string name="t_imageView_evro_bacgraund">Euro icon</string>
+    <string name="t_imageView_yany_bacgraund">Yuan icon</string>
+    <string name="t_imageView_dolar_ico">Dolar icon</string>
 
     <string name="neam">Laptop</string>
     <string name="site_price">0 rubles.</string>
     <string name="auto_zak_steam">0 rubles.</string>
     <string name="commission_in_sale">0 %</string>
     <string name="count_items">0 pc</string>
+    <string name="null_valute_rub">00000 rubles.</string>
+    <string name="null_valute_dolar">00000 $</string>
 
     <string name="bt_valute">Currency button</string>
     <string name="bt_histori">The history button</string>
@@ -48,6 +60,9 @@
     <string name="hint_tezult_convert">1,42</string>
     <string name="convetirovat">Convert</string>
 
-    <string name="text_warning">Currencies are still static</string>
+    <string name="text_warning">In the absence of an Internet connection, currencies are static; connect to the Internet</string>
+    <string name="text_warning_start_lod">Update the exchange rate for a more accurate value !</string>
     <string name="select_currency">Select a currency</string>
+    <string name="old_costs">Third Party Costs rubles.</string>
+
 </resources>

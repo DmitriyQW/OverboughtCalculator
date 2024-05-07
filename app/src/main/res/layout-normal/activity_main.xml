@@ -28,10 +28,10 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.483"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.864">
+        app:layout_constraintVertical_bias="0.884">
 
         <TextView
             android:id="@+id/textView_rezults"
@@ -274,6 +274,30 @@
             android:textColorHint="@color/orange_button_rezult"
             android:textSize="16sp" />
 
+        <TextView
+            android:id="@+id/textView_old_costs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4sp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:hint="@string/t_count"
+            android:text="@string/old_costs"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/editTextText_old_costs"
+            android:layout_width="370sp"
+            android:layout_height="50sp"
+            android:background="@drawable/stayl_pole"
+            android:ems="10"
+            android:hint="@string/site_price"
+            android:inputType="number"
+            android:paddingStart="12sp"
+            android:paddingEnd="12sp"
+            android:textColor="@color/orange_button_rezult"
+            android:textColorHint="@color/orange_button_rezult" />
+
 
     </LinearLayout>
 
@@ -344,6 +368,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.989"
         app:srcCompat="@drawable/ic_valute" />
+
+    <ImageButton
+        android:id="@+id/imageButton_bt_stocks"
+        android:layout_width="48sp"
+        android:layout_height="48sp"
+        android:background="@drawable/stile_bt_no_select"
+        android:contentDescription="@string/bt_valute"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.741"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.989"
+        app:srcCompat="@drawable/ic_stocks" />
 
     <TextView
         android:id="@+id/textView"
