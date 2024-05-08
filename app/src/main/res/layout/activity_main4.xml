@@ -34,36 +34,22 @@
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_logo_new" />
 
-    <ImageView
-        android:id="@+id/imageView_MTC"
-        android:layout_width="114dp"
-        android:layout_height="104dp"
-        android:layout_marginTop="140dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.131"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_mtc" />
-
-    <TextView
-        android:id="@+id/textView_mtc_main_name"
+    <Button
+        android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="4dp"
-        android:text="MTC"
-        android:textColor="@color/white"
-        android:textSize="22sp"
+        android:layout_marginTop="728dp"
+        android:text="Обнавить"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView_MTC"
-        app:layout_constraintTop_toTopOf="@+id/imageView_MTC" />
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView_mtc_first_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="36dp"
         android:text="MTSS"
         android:textColor="@color/white"
         android:textSize="22sp"
@@ -73,46 +59,23 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_mtc_main_name" />
 
     <TextView
-        android:id="@+id/textView_cost_mtc_stalse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Цена за акцию"
-        android:textColor="#E1F37F"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.736"
-        app:layout_constraintStart_toEndOf="@+id/textView_mtc_main_name"
-        app:layout_constraintTop_toTopOf="@+id/textView_mtc_main_name" />
-
-    <TextView
-        android:id="@+id/textView_cost_mtc"
+        android:id="@+id/textView_cost_aeroflot"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="308,1 ₽"
+        android:text="49,68 ₽"
         android:textColor="@color/white"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView_cost_mtc_stalse"
-        app:layout_constraintStart_toStartOf="@+id/textView_cost_mtc_stalse"
-        app:layout_constraintTop_toBottomOf="@+id/textView_cost_mtc_stalse" />
-
-    <ImageView
-        android:id="@+id/imageView_aeroflot"
-        android:layout_width="114dp"
-        android:layout_height="107dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView_MTC"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView_MTC"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_MTC"
-        app:srcCompat="@drawable/ic_aeroflot" />
+        app:layout_constraintEnd_toEndOf="@+id/textView_cost_aeroflot_stalse"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="@+id/textView_cost_aeroflot_stalse"
+        app:layout_constraintTop_toBottomOf="@+id/textView_cost_aeroflot_stalse" />
 
     <ImageView
         android:id="@+id/imageView_bash_neft"
         android:layout_width="112dp"
         android:layout_height="108dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="64dp"
         app:layout_constraintEnd_toEndOf="@+id/imageView_aeroflot"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView_aeroflot"
@@ -120,46 +83,10 @@
         app:srcCompat="@drawable/ic_bash_neft" />
 
     <TextView
-        android:id="@+id/textView_aeroflot_main_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Аэрофлот"
-        android:textColor="@color/white"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.064"
-        app:layout_constraintStart_toEndOf="@+id/imageView_aeroflot"
-        app:layout_constraintTop_toTopOf="@+id/imageView_aeroflot" />
-
-    <TextView
-        android:id="@+id/textView_aeroflot_first_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="AFLT"
-        android:textColor="@color/white"
-        android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView_aeroflot_main_name"
-        app:layout_constraintHorizontal_bias="0.518"
-        app:layout_constraintStart_toStartOf="@+id/textView_aeroflot_main_name"
-        app:layout_constraintTop_toBottomOf="@+id/textView_aeroflot_main_name" />
-
-    <TextView
-        android:id="@+id/textView_cost_aeroflot_stalse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Цена за акцию"
-        android:textColor="#E1F37F"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView_aeroflot_main_name"
-        app:layout_constraintTop_toTopOf="@+id/textView_aeroflot_main_name" />
-
-    <TextView
         android:id="@+id/textView_bash_neft_main_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:text="Башнефть"
         android:textColor="@color/white"
         android:textSize="22sp"
@@ -169,10 +96,112 @@
         app:layout_constraintTop_toTopOf="@+id/imageView_bash_neft" />
 
     <TextView
+        android:id="@+id/textView_cost_aeroflot_stalse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Цена за акцию"
+        android:textColor="#E1F37F"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView_aeroflot_main_name"
+        app:layout_constraintTop_toTopOf="@+id/textView_aeroflot_main_name" />
+
+    <ImageView
+        android:id="@+id/imageView_aeroflot"
+        android:layout_width="114dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_MTC"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView_MTC"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_MTC"
+        app:srcCompat="@drawable/ic_aeroflot" />
+
+    <TextView
+        android:id="@+id/textView_cost_mtc_stalse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Цена за акцию"
+        android:textColor="#E1F37F"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.736"
+        app:layout_constraintStart_toEndOf="@+id/textView_mtc_main_name"
+        app:layout_constraintTop_toTopOf="@+id/textView_mtc_main_name" />
+
+    <TextView
+        android:id="@+id/textView_aeroflot_main_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Аэрофлот"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.064"
+        app:layout_constraintStart_toEndOf="@+id/imageView_aeroflot"
+        app:layout_constraintTop_toTopOf="@+id/imageView_aeroflot" />
+
+    <TextView
+        android:id="@+id/textView_cost_mtc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:inputType="number|numberDecimal"
+        android:text="308,1 ₽"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView_cost_mtc_stalse"
+        app:layout_constraintStart_toStartOf="@+id/textView_cost_mtc_stalse"
+        app:layout_constraintTop_toBottomOf="@+id/textView_cost_mtc_stalse" />
+
+    <TextView
+        android:id="@+id/textView_mtc_main_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp"
+        android:text="MTC"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView_MTC"
+        app:layout_constraintTop_toTopOf="@+id/imageView_MTC" />
+
+    <TextView
+        android:id="@+id/textView_cost_bash_neft_stalse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Цена за акцию"
+        android:textColor="#E1F37F"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toEndOf="@+id/textView_bash_neft_main_name"
+        app:layout_constraintTop_toTopOf="@+id/textView_bash_neft_main_name" />
+
+    <TextView
+        android:id="@+id/textView_aeroflot_first_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="AFLT"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView_aeroflot_main_name"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="@+id/textView_aeroflot_main_name"
+        app:layout_constraintTop_toBottomOf="@+id/textView_aeroflot_main_name" />
+
+    <TextView
         android:id="@+id/textView_bash_neft_first_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="44dp"
         android:text="BANE"
         android:textColor="@color/white"
         android:textSize="22sp"
@@ -182,34 +211,10 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_bash_neft_main_name" />
 
     <TextView
-        android:id="@+id/textView_cost_aeroflot"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:text="49,68 ₽"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView_cost_aeroflot_stalse"
-        app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toStartOf="@+id/textView_cost_aeroflot_stalse"
-        app:layout_constraintTop_toBottomOf="@+id/textView_cost_aeroflot_stalse" />
-
-    <TextView
-        android:id="@+id/textView_cost_bash_neft_stalse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Цена за акцию"
-        android:textColor="#E1F37F"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView_bash_neft_main_name"
-        app:layout_constraintTop_toTopOf="@+id/textView_bash_neft_main_name" />
-
-    <TextView
         android:id="@+id/textView_cost_bash_neft"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="48dp"
         android:text="3 335 ₽"
         android:textColor="@color/white"
         android:textSize="24sp"
@@ -218,14 +223,26 @@
         app:layout_constraintStart_toStartOf="@+id/textView_cost_bash_neft_stalse"
         app:layout_constraintTop_toBottomOf="@+id/textView_cost_bash_neft_stalse" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="660dp"
-        android:text="Обнавить"
+    <ImageView
+        android:id="@+id/imageView_MTC"
+        android:layout_width="114dp"
+        android:layout_height="104dp"
+        android:layout_marginTop="208dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_mtc" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="391dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="92dp"
+        android:text="Курс 3 самых популярных акций российских компаний"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
