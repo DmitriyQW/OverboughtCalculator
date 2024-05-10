@@ -1,6 +1,9 @@
 package com.tradecalc.lernjava;
 
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.net.ConnectivityManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -19,14 +22,16 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class MainActivity4 extends AppCompatActivity {
     private ActivityMain4Binding bunding4;
     private Document doc = null;
     private MyAsyncTask2 task2;
     private boolean requestBR = false;
-    private String mtc_cost, bash_neft_cost, aeroflot_cost;
+    private String urlImage_0,urlImage_1,urlImage_2,mainName_0,mainName_1,mainName_2,firstName_0,firstName_1,firstName_2,cost_0,cost_1,cost_2;
 
+    private ArrayList<Stock> stocks;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
@@ -34,15 +39,19 @@ public class MainActivity4 extends AppCompatActivity {
         bunding4 = ActivityMain4Binding.inflate(getLayoutInflater());
         setContentView(bunding4.getRoot());
 
-        bunding4.button.setOnClickListener(new View.OnClickListener() {
+        bunding4.buttonUpdatingCourse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (requestBR == false) {
-                    task2 = new MyAsyncTask2();
-                    requestBR = true;
-                    task2.execute();
-                } else {
-                    showInfo("У вас уже самые актуальные данные !");
+                if (isOnline()){
+                    if (requestBR == false) {
+                        task2 = new MyAsyncTask2();
+                        requestBR = true;
+                        task2.execute();
+                    } else {
+                        showInfo("У вас уже самые актуальные данные !");
+                    }
+                }else {
+                    showInfo("У вас нет интернета !");
                 }
             }
         });
@@ -61,31 +70,54 @@ public class MainActivity4 extends AppCompatActivity {
             //Берём все строчки акций по классу
             Elements table = doc.getElementsByClass("Panel__sc-1g68tnu-1 hDJOiX");
 
-            //Мтс под 0 элементом
-            Element select_element_mtc = table.get(0);
 
-            //Цена на акцию МТС
-            Elements cost_mtc = select_element_mtc.getElementsByClass("TextResponsive__sc-hroye5-0 keyTWo");
-            mtc_cost = cost_mtc.get(0).text();
-            Log.d("Цена MTC", cost_mtc.get(0).text());
+            //Первое место в топе элем 0 элементом
+            Element select_element_0 = table.get(0);
+
+            //Первое место имена главное и второе
+            Elements mainNeam_0_teamp = select_element_0.getElementsByClass("TextResponsive__sc-hroye5-0 jKnrKA");
+            Elements firstNeam_0_teamp = select_element_0.getElementsByClass("TextResponsive__sc-hroye5-0 jxebas");
+            mainName_0 = mainNeam_0_teamp.get(0).text();
+            firstName_0 = firstNeam_0_teamp.get(0).text();
+
+//            //Картинка
+//            Elements imagesSrc = select_element_0.getElementsByClass("FlexboxGrid__sc-akw86o-0 dCpMUp");
+//            Log.d("Картинки ссылки",imagesSrc.html());
 
 
-            //Башнефть под 1 элементом
-            Element select_element_bash_neft = table.get(1);
+            //Цена на первое место
+            Elements costs_0 = select_element_0.getElementsByClass("TextResponsive__sc-hroye5-0 keyTWo");
+            cost_0 = costs_0.get(0).text();
+            Log.d("Цена акции под первым местом", cost_0);
 
-            //Цена на акцию Башнефть
-            Elements cost_bash_neft = select_element_bash_neft.getElementsByClass("TextResponsive__sc-hroye5-0 keyTWo");
-            bash_neft_cost = cost_bash_neft.get(0).text();
-            Log.d("Цена Башнефть", cost_bash_neft.get(0).text());
 
-            //Аэрофлот под 2 элементом
-            Element select_element_aeroflot = table.get(2);
+            //Второе место в топе элем 1 элементом
+            Element select_element_1 = table.get(1);
 
-            //Цена на акцию Аэрофлот
-            Elements cost_aeroflot = select_element_aeroflot.getElementsByClass("TextResponsive__sc-hroye5-0 keyTWo");
-            aeroflot_cost = cost_aeroflot.get(0).text();
-            Log.d("Цена Аэрофлот", cost_aeroflot.get(0).text());
+            //Цена на акцию под вторым местом
+            Elements costs_1 = select_element_1.getElementsByClass("TextResponsive__sc-hroye5-0 keyTWo");
+            cost_1 = costs_1.get(0).text();
+            Log.d("Цена Башнефть", cost_1);
 
+            //Второе место имена главное и второе
+            Elements mainNeam_1_teamp = select_element_1.getElementsByClass("TextResponsive__sc-hroye5-0 jKnrKA");
+            Elements firstNeam_1_teamp = select_element_1.getElementsByClass("TextResponsive__sc-hroye5-0 jxebas");
+            mainName_1 = mainNeam_1_teamp.get(0).text();
+            firstName_1 = firstNeam_1_teamp.get(0).text();
+
+            //Третье место в топе элем 2 элементом
+            Element select_element_2 = table.get(2);
+
+            ///Цена на акцию под третьим местом
+            Elements costs_2 = select_element_2.getElementsByClass("TextResponsive__sc-hroye5-0 keyTWo");
+            cost_2 = costs_2.get(0).text();
+            Log.d("Цена Аэрофлот", cost_2);
+
+            //Третье место имена главное и второе
+            Elements mainNeam_2_teamp = select_element_2.getElementsByClass("TextResponsive__sc-hroye5-0 jKnrKA");
+            Elements firstNeam_2_teamp = select_element_2.getElementsByClass("TextResponsive__sc-hroye5-0 jxebas");
+            mainName_2 = mainNeam_2_teamp.get(0).text();
+            firstName_2 = firstNeam_2_teamp.get(0).text();
 
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -102,14 +134,33 @@ public class MainActivity4 extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Void unused) {
-// Изменяем графический интерфейс
-            bunding4.textViewCostMtc.setText(mtc_cost);
-            bunding4.textViewCostBashNeft.setText(bash_neft_cost);
-            bunding4.textViewCostAeroflot.setText(aeroflot_cost);
+        // Изменяем графический интерфейс
+
+            //Первое место
+            bunding4.textViewTopMainName.setText(mainName_0);
+            bunding4.textViewTopFirstName.setText(firstName_0);
+            bunding4.textViewCostTop.setText(cost_0);
+            //Второе место
+            bunding4.textViewSecondMainName.setText(mainName_1);
+            bunding4.textViewSecondFirstName.setText(firstName_1);
+            bunding4.textViewCostSecond.setText(cost_1);
+            //Третье место
+            bunding4.textViewThirdMainName.setText(mainName_2);
+            bunding4.textViewThirdFirstName.setText(firstName_2);
+            bunding4.textViewCostThird.setText(cost_2);
         }
     }
 
     public void showInfo(String text) {
         Toast.makeText(this, text, Toast.LENGTH_SHORT).show();
+    }
+    private boolean isOnline(){
+        String cs = Context.CONNECTIVITY_SERVICE;
+        ConnectivityManager cm = (ConnectivityManager) getSystemService(cs);
+        if (cm.getActiveNetworkInfo() == null){
+            return false;
+        }else {
+            return true;
+        }
     }
 }

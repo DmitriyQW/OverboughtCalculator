@@ -35,35 +35,38 @@
         app:srcCompat="@drawable/ic_logo_new" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="728dp"
+        android:id="@+id/button_updating_course"
+        android:layout_width="134dp"
+        android:layout_height="62dp"
+        android:layout_marginTop="708dp"
+        android:backgroundTint="@color/orange_button_rezult"
         android:text="Обнавить"
+        android:textSize="18sp"
+        app:cornerRadius="12sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintHorizontal_bias="0.537"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView_mtc_first_name"
+        android:id="@+id/textView_top_first_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:text="MTSS"
+        android:text="Null"
         android:textColor="@color/white"
         android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView_mtc_main_name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_top_main_name"
         app:layout_constraintHorizontal_bias="0.083"
-        app:layout_constraintStart_toStartOf="@+id/textView_mtc_main_name"
-        app:layout_constraintTop_toBottomOf="@+id/textView_mtc_main_name" />
+        app:layout_constraintStart_toStartOf="@+id/textView_top_main_name"
+        app:layout_constraintTop_toBottomOf="@+id/textView_top_main_name" />
 
     <TextView
-        android:id="@+id/textView_cost_aeroflot"
+        android:id="@+id/textView_cost_second"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="49,68 ₽"
+        android:text="Null"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/textView_cost_aeroflot_stalse"
@@ -79,15 +82,14 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView_aeroflot"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView_aeroflot"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_aeroflot"
-        app:srcCompat="@drawable/ic_bash_neft" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_aeroflot" />
 
     <TextView
-        android:id="@+id/textView_bash_neft_main_name"
+        android:id="@+id/textView_third_main_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="Башнефть"
+        android:text="Null"
         android:textColor="@color/white"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -104,8 +106,8 @@
         android:textColor="#E1F37F"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView_aeroflot_main_name"
-        app:layout_constraintTop_toTopOf="@+id/textView_aeroflot_main_name" />
+        app:layout_constraintStart_toEndOf="@+id/textView_second_main_name"
+        app:layout_constraintTop_toTopOf="@+id/textView_second_main_name" />
 
     <ImageView
         android:id="@+id/imageView_aeroflot"
@@ -115,8 +117,7 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView_MTC"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView_MTC"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_MTC"
-        app:srcCompat="@drawable/ic_aeroflot" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_MTC" />
 
     <TextView
         android:id="@+id/textView_cost_mtc_stalse"
@@ -128,15 +129,15 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.736"
-        app:layout_constraintStart_toEndOf="@+id/textView_mtc_main_name"
-        app:layout_constraintTop_toTopOf="@+id/textView_mtc_main_name" />
+        app:layout_constraintStart_toEndOf="@+id/textView_top_main_name"
+        app:layout_constraintTop_toTopOf="@+id/textView_top_main_name" />
 
     <TextView
-        android:id="@+id/textView_aeroflot_main_name"
+        android:id="@+id/textView_second_main_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Аэрофлот"
+        android:text="Null"
         android:textColor="@color/white"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -145,12 +146,11 @@
         app:layout_constraintTop_toTopOf="@+id/imageView_aeroflot" />
 
     <TextView
-        android:id="@+id/textView_cost_mtc"
+        android:id="@+id/textView_cost_top"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:inputType="number|numberDecimal"
-        android:text="308,1 ₽"
+        android:text="Null"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/textView_cost_mtc_stalse"
@@ -158,12 +158,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_cost_mtc_stalse" />
 
     <TextView
-        android:id="@+id/textView_mtc_main_name"
+        android:id="@+id/textView_top_main_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
-        android:text="MTC"
+        android:text="Null"
         android:textColor="@color/white"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -181,41 +181,41 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.483"
-        app:layout_constraintStart_toEndOf="@+id/textView_bash_neft_main_name"
-        app:layout_constraintTop_toTopOf="@+id/textView_bash_neft_main_name" />
+        app:layout_constraintStart_toEndOf="@+id/textView_third_main_name"
+        app:layout_constraintTop_toTopOf="@+id/textView_third_main_name" />
 
     <TextView
-        android:id="@+id/textView_aeroflot_first_name"
+        android:id="@+id/textView_second_first_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="AFLT"
+        android:text="Null"
         android:textColor="@color/white"
         android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView_aeroflot_main_name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_second_main_name"
         app:layout_constraintHorizontal_bias="0.518"
-        app:layout_constraintStart_toStartOf="@+id/textView_aeroflot_main_name"
-        app:layout_constraintTop_toBottomOf="@+id/textView_aeroflot_main_name" />
+        app:layout_constraintStart_toStartOf="@+id/textView_second_main_name"
+        app:layout_constraintTop_toBottomOf="@+id/textView_second_main_name" />
 
     <TextView
-        android:id="@+id/textView_bash_neft_first_name"
+        android:id="@+id/textView_third_first_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
-        android:text="BANE"
+        android:text="Null"
         android:textColor="@color/white"
         android:textSize="22sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView_bash_neft_main_name"
+        app:layout_constraintEnd_toEndOf="@+id/textView_third_main_name"
         app:layout_constraintHorizontal_bias="0.42"
-        app:layout_constraintStart_toStartOf="@+id/textView_bash_neft_main_name"
-        app:layout_constraintTop_toBottomOf="@+id/textView_bash_neft_main_name" />
+        app:layout_constraintStart_toStartOf="@+id/textView_third_main_name"
+        app:layout_constraintTop_toBottomOf="@+id/textView_third_main_name" />
 
     <TextView
-        android:id="@+id/textView_cost_bash_neft"
+        android:id="@+id/textView_cost_third"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:text="3 335 ₽"
+        android:text="Null"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/textView_cost_bash_neft_stalse"
@@ -231,8 +231,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_mtc" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView4"
