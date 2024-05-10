@@ -75,14 +75,14 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_cost_aeroflot_stalse" />
 
     <ImageView
-        android:id="@+id/imageView_bash_neft"
-        android:layout_width="112dp"
-        android:layout_height="108dp"
+        android:id="@+id/imageView_third"
+        android:layout_width="114dp"
+        android:layout_height="104dp"
         android:layout_marginTop="64dp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView_aeroflot"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_second"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView_aeroflot"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_aeroflot" />
+        app:layout_constraintStart_toStartOf="@+id/imageView_second"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_second" />
 
     <TextView
         android:id="@+id/textView_third_main_name"
@@ -94,8 +94,8 @@
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.077"
-        app:layout_constraintStart_toEndOf="@+id/imageView_bash_neft"
-        app:layout_constraintTop_toTopOf="@+id/imageView_bash_neft" />
+        app:layout_constraintStart_toEndOf="@+id/imageView_third"
+        app:layout_constraintTop_toTopOf="@+id/imageView_third" />
 
     <TextView
         android:id="@+id/textView_cost_aeroflot_stalse"
@@ -110,14 +110,14 @@
         app:layout_constraintTop_toTopOf="@+id/textView_second_main_name" />
 
     <ImageView
-        android:id="@+id/imageView_aeroflot"
+        android:id="@+id/imageView_second"
         android:layout_width="114dp"
-        android:layout_height="107dp"
+        android:layout_height="104dp"
         android:layout_marginTop="44dp"
-        app:layout_constraintEnd_toEndOf="@+id/imageView_MTC"
+        app:layout_constraintEnd_toEndOf="@+id/imageView_top"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView_MTC"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_MTC" />
+        app:layout_constraintStart_toStartOf="@+id/imageView_top"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_top" />
 
     <TextView
         android:id="@+id/textView_cost_mtc_stalse"
@@ -142,8 +142,8 @@
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.064"
-        app:layout_constraintStart_toEndOf="@+id/imageView_aeroflot"
-        app:layout_constraintTop_toTopOf="@+id/imageView_aeroflot" />
+        app:layout_constraintStart_toEndOf="@+id/imageView_second"
+        app:layout_constraintTop_toTopOf="@+id/imageView_second" />
 
     <TextView
         android:id="@+id/textView_cost_top"
@@ -168,8 +168,8 @@
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/imageView_MTC"
-        app:layout_constraintTop_toTopOf="@+id/imageView_MTC" />
+        app:layout_constraintStart_toEndOf="@+id/imageView_top"
+        app:layout_constraintTop_toTopOf="@+id/imageView_top" />
 
     <TextView
         android:id="@+id/textView_cost_bash_neft_stalse"
@@ -224,7 +224,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_cost_bash_neft_stalse" />
 
     <ImageView
-        android:id="@+id/imageView_MTC"
+        android:id="@+id/imageView_top"
         android:layout_width="114dp"
         android:layout_height="104dp"
         android:layout_marginTop="208dp"

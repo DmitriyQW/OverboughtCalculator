@@ -37,6 +37,7 @@ android {
 }
 
 dependencies {
+    implementation("com.android.volley:volley:1.2.1")
     implementation("org.jsoup:jsoup:1.17.2")
     implementation(libs.appcompat)
     implementation(libs.material)
