@@ -28,9 +28,7 @@ public class MainActivity2 extends AppCompatActivity {
     private SharedPreferences pref;
     private Document doc = null;
     private  ActivityMain2Binding bunding2;
-    private boolean onclicEvro = false;
-    private boolean onclicDolar = false;
-    private boolean onclicYany = false;
+    private boolean onclicEvro,onclicDolar,onclicYany,requestCB = false;
     private String evro_curse,dolar_curse,yuan_curse;
     private float curse_evor,curse_dolar,curse_yan;
 
@@ -139,13 +137,19 @@ public class MainActivity2 extends AppCompatActivity {
             bunding2.textViewYany.setText(String.valueOf(pref.getFloat(key_curs_yan,0)));
 
         }else {
-            if (task.getStatus() != AsyncTask.Status.RUNNING){
-                bunding2.textViewTextWarning.setVisibility(View.GONE);
-                task.execute();
+            if (requestCB==false){
+                if (task.getStatus() != AsyncTask.Status.RUNNING){
+                    bunding2.textViewTextWarning.setVisibility(View.GONE);
+                    requestCB = true;
+                    task.execute();
+                }
+                else {
+                    showInfo("Уже выполняется");
+                }
+            }else {
+                showInfo("У вас уже самый актуальный курс");
             }
-            else {
-                showInfo("Уже выполняется");
-            }
+
         }
     }
 });
@@ -193,6 +197,13 @@ public class MainActivity2 extends AppCompatActivity {
             throw new RuntimeException(e);
         }
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        finish();
+    }
+
     private void initpref(){
         pref = getSharedPreferences("Valute",MODE_PRIVATE);
     }
