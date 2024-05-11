@@ -53,7 +53,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
-        android:text="Null"
         android:textColor="@color/white"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="@+id/textView_top_main_name"
@@ -66,7 +65,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="Null"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/textView_cost_aeroflot_stalse"
@@ -82,14 +80,14 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView_second"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView_second"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_second" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_second"
+        app:srcCompat="@drawable/ic_third" />
 
     <TextView
         android:id="@+id/textView_third_main_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="Null"
         android:textColor="@color/white"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -117,7 +115,8 @@
         app:layout_constraintEnd_toEndOf="@+id/imageView_top"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView_top"
-        app:layout_constraintTop_toBottomOf="@+id/imageView_top" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView_top"
+        app:srcCompat="@drawable/ic_second" />
 
     <TextView
         android:id="@+id/textView_cost_mtc_stalse"
@@ -137,7 +136,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Null"
         android:textColor="@color/white"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -150,7 +148,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:text="Null"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/textView_cost_mtc_stalse"
@@ -163,7 +160,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
-        android:text="Null"
         android:textColor="@color/white"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -189,7 +185,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="Null"
         android:textColor="@color/white"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="@+id/textView_second_main_name"
@@ -202,7 +197,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
-        android:text="Null"
         android:textColor="@color/white"
         android:textSize="22sp"
         app:layout_constraintEnd_toEndOf="@+id/textView_third_main_name"
@@ -215,7 +209,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
-        android:text="Null"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/textView_cost_bash_neft_stalse"
@@ -231,14 +224,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_top" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="391dp"
         android:layout_height="62dp"
         android:layout_marginTop="92dp"
-        android:text="Курс 3 самых популярных акций российских компаний"
+        android:text="Курс 3 самых популярных акций российских компаний !"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"

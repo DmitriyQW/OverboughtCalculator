@@ -21,7 +21,6 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
-
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -30,7 +29,7 @@ public class MainActivity4 extends AppCompatActivity {
     private Document doc = null;
     private MyAsyncTask2 task2;
     private boolean requestBR = false;
-    private String urlImage_0 = "https://gas-kvas.com/uploads/posts/2023-02/1675489740_gas-kvas-com-p-izobrazheniya-i-kartinki-na-fonovii-risuno-9.jpg",urlImage_1,urlImage_2,mainName_0,mainName_1,mainName_2,firstName_0,firstName_1,firstName_2,cost_0,cost_1,cost_2;
+    private String urlImage_0 = "https://i.stack.imgur.com/ejAEh.png",urlImage_1,urlImage_2,mainName_0,mainName_1,mainName_2,firstName_0,firstName_1,firstName_2,cost_0,cost_1,cost_2;
 
     private ArrayList<Stock> stocks;
     @Override
@@ -91,6 +90,11 @@ public class MainActivity4 extends AppCompatActivity {
             cost_0 = costs_0.get(0).text();
             Log.d("Цена акции под первым местом", cost_0);
 
+//            //Картинка первого места
+//            Elements src_0 = select_element_0.getElementsByClass("Logo__StyledLogo-sc-2kyqmf-0 kMrSPl");
+//            //urlImage_0 = src_0.text();
+//            Log.d("Url : ",src_0.html());
+
 
             //Второе место в топе элем 1 элементом
             Element select_element_1 = table.get(1);
@@ -141,50 +145,52 @@ public class MainActivity4 extends AppCompatActivity {
             bunding4.textViewTopMainName.setText(mainName_0);
             bunding4.textViewTopFirstName.setText(firstName_0);
             bunding4.textViewCostTop.setText(cost_0);
-            ImageRequest imageRequest_0 = new ImageRequest(urlImage_0, new Response.Listener<Bitmap>() {
-                @Override
-                public void onResponse(Bitmap responce) {
-                    bunding4.imageViewTop.setImageBitmap(responce);
-                }
-            }, 114, 104, null, Bitmap.Config.ARGB_8888, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError volleyError) {
-                    Toast.makeText(MainActivity4.this,"Не вышло загрузить",Toast.LENGTH_LONG).show();
-                }
-            });
-            Volley.newRequestQueue(MainActivity4.this).add(imageRequest_0);
+
+
+//            ImageRequest imageRequest_0 = new ImageRequest(urlImage_0, new Response.Listener<Bitmap>() {
+//                @Override
+//                public void onResponse(Bitmap responce) {
+//                    bunding4.imageViewTop.setImageBitmap(responce);
+//                }
+//            }, 114, 104, null, Bitmap.Config.ARGB_8888, new Response.ErrorListener() {
+//                @Override
+//                public void onErrorResponse(VolleyError volleyError) {
+//                    Toast.makeText(MainActivity4.this,"Не вышло загрузить",Toast.LENGTH_LONG).show();
+//                }
+//            });
+//            Volley.newRequestQueue(MainActivity4.this).add(imageRequest_0);
             //Второе место
             bunding4.textViewSecondMainName.setText(mainName_1);
             bunding4.textViewSecondFirstName.setText(firstName_1);
             bunding4.textViewCostSecond.setText(cost_1);
-            ImageRequest imageRequest_1 = new ImageRequest(urlImage_0, new Response.Listener<Bitmap>() {
-                @Override
-                public void onResponse(Bitmap responce) {
-                    bunding4.imageViewSecond.setImageBitmap(responce);
-                }
-            }, 114, 104, null, Bitmap.Config.ARGB_8888, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError volleyError) {
-                    Toast.makeText(MainActivity4.this,"Не вышло загрузить",Toast.LENGTH_LONG).show();
-                }
-            });
-            Volley.newRequestQueue(MainActivity4.this).add(imageRequest_1);
+//            ImageRequest imageRequest_1 = new ImageRequest(urlImage_0, new Response.Listener<Bitmap>() {
+//                @Override
+//                public void onResponse(Bitmap responce) {
+//                    bunding4.imageViewSecond.setImageBitmap(responce);
+//                }
+//            }, 114, 104, null, Bitmap.Config.ARGB_8888, new Response.ErrorListener() {
+//                @Override
+//                public void onErrorResponse(VolleyError volleyError) {
+//                    Toast.makeText(MainActivity4.this,"Не вышло загрузить",Toast.LENGTH_LONG).show();
+//                }
+//            });
+//            Volley.newRequestQueue(MainActivity4.this).add(imageRequest_1);
             //Третье место
             bunding4.textViewThirdMainName.setText(mainName_2);
             bunding4.textViewThirdFirstName.setText(firstName_2);
             bunding4.textViewCostThird.setText(cost_2);
-            ImageRequest imageRequest_2 = new ImageRequest(urlImage_0, new Response.Listener<Bitmap>() {
-                @Override
-                public void onResponse(Bitmap responce) {
-                    bunding4.imageViewThird.setImageBitmap(responce);
-                }
-            }, 114, 104, null, Bitmap.Config.ARGB_8888, new Response.ErrorListener() {
-                @Override
-                public void onErrorResponse(VolleyError volleyError) {
-                    Toast.makeText(MainActivity4.this,"Не вышло загрузить",Toast.LENGTH_LONG).show();
-                }
-            });
-            Volley.newRequestQueue(MainActivity4.this).add(imageRequest_2);
+//            ImageRequest imageRequest_2 = new ImageRequest(urlImage_0, new Response.Listener<Bitmap>() {
+//                @Override
+//                public void onResponse(Bitmap responce) {
+//                    bunding4.imageViewThird.setImageBitmap(responce);
+//                }
+//            }, 114, 104, null, Bitmap.Config.ARGB_8888, new Response.ErrorListener() {
+//                @Override
+//                public void onErrorResponse(VolleyError volleyError) {
+//                    Toast.makeText(MainActivity4.this,"Не вышло загрузить",Toast.LENGTH_LONG).show();
+//                }
+//            });
+//            Volley.newRequestQueue(MainActivity4.this).add(imageRequest_2);
         }
     }
 
