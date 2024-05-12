@@ -63,4 +63,8 @@
     <string name="text_warning_start_lod">Обновите курс валют для болие точного значения !</string>
     <string name="select_currency">Выберите валюту</string>
     <string name="old_costs">Сторонние затраты руб.</string>
+
+    <string name="cost_stalse">Цена за акцию</string>
+    <string name="course_popular_shares">Курс 3 самых популярных акций российских компаний !</string>
+    <string name="update">Обнавить</string>
 </resources>

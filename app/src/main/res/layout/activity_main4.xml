@@ -40,7 +40,7 @@
         android:layout_height="62dp"
         android:layout_marginTop="708dp"
         android:backgroundTint="@color/orange_button_rezult"
-        android:text="Обнавить"
+        android:text="@string/update"
         android:textSize="18sp"
         app:cornerRadius="12sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -67,10 +67,10 @@
         android:layout_marginTop="40dp"
         android:textColor="@color/white"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView_cost_aeroflot_stalse"
+        app:layout_constraintEnd_toEndOf="@+id/textView_cost_stalse_2"
         app:layout_constraintHorizontal_bias="0.4"
-        app:layout_constraintStart_toStartOf="@+id/textView_cost_aeroflot_stalse"
-        app:layout_constraintTop_toBottomOf="@+id/textView_cost_aeroflot_stalse" />
+        app:layout_constraintStart_toStartOf="@+id/textView_cost_stalse_2"
+        app:layout_constraintTop_toBottomOf="@+id/textView_cost_stalse_2" />
 
     <ImageView
         android:id="@+id/imageView_third"
@@ -96,11 +96,11 @@
         app:layout_constraintTop_toTopOf="@+id/imageView_third" />
 
     <TextView
-        android:id="@+id/textView_cost_aeroflot_stalse"
+        android:id="@+id/textView_cost_stalse_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="Цена за акцию"
+        android:text="@string/cost_stalse"
         android:textColor="#E1F37F"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -119,15 +119,14 @@
         app:srcCompat="@drawable/ic_second" />
 
     <TextView
-        android:id="@+id/textView_cost_mtc_stalse"
+        android:id="@+id/textView_cost_stalse_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Цена за акцию"
+        android:text="@string/cost_stalse"
         android:textColor="#E1F37F"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.736"
         app:layout_constraintStart_toEndOf="@+id/textView_top_main_name"
         app:layout_constraintTop_toTopOf="@+id/textView_top_main_name" />
 
@@ -150,9 +149,9 @@
         android:layout_marginTop="32dp"
         android:textColor="@color/white"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView_cost_mtc_stalse"
-        app:layout_constraintStart_toStartOf="@+id/textView_cost_mtc_stalse"
-        app:layout_constraintTop_toBottomOf="@+id/textView_cost_mtc_stalse" />
+        app:layout_constraintEnd_toEndOf="@+id/textView_cost_stalse_1"
+        app:layout_constraintStart_toStartOf="@+id/textView_cost_stalse_1"
+        app:layout_constraintTop_toBottomOf="@+id/textView_cost_stalse_1" />
 
     <TextView
         android:id="@+id/textView_top_main_name"
@@ -168,11 +167,11 @@
         app:layout_constraintTop_toTopOf="@+id/imageView_top" />
 
     <TextView
-        android:id="@+id/textView_cost_bash_neft_stalse"
+        android:id="@+id/textView_cost_stalse_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:text="Цена за акцию"
+        android:text="@string/cost_stalse"
         android:textColor="#E1F37F"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -211,10 +210,10 @@
         android:layout_marginTop="48dp"
         android:textColor="@color/white"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/textView_cost_bash_neft_stalse"
+        app:layout_constraintEnd_toEndOf="@+id/textView_cost_stalse_3"
         app:layout_constraintHorizontal_bias="0.379"
-        app:layout_constraintStart_toStartOf="@+id/textView_cost_bash_neft_stalse"
-        app:layout_constraintTop_toBottomOf="@+id/textView_cost_bash_neft_stalse" />
+        app:layout_constraintStart_toStartOf="@+id/textView_cost_stalse_3"
+        app:layout_constraintTop_toBottomOf="@+id/textView_cost_stalse_3" />
 
     <ImageView
         android:id="@+id/imageView_top"
@@ -232,7 +231,7 @@
         android:layout_width="391dp"
         android:layout_height="62dp"
         android:layout_marginTop="92dp"
-        android:text="Курс 3 самых популярных акций российских компаний !"
+        android:text="@string/course_popular_shares"
         android:textColor="@color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"

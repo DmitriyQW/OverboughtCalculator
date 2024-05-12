@@ -65,4 +65,7 @@
     <string name="select_currency">Select a currency</string>
     <string name="old_costs">Third Party Costs rubles.</string>
 
+    <string name="cost_stalse">Price per share</string>
+    <string name="course_popular_shares">The course of the 3 most popular shares of Russian companies !</string>
+    <string name="update">Update</string>
 </resources>
