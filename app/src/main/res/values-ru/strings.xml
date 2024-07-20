@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Мастер получения прибыли</string>
     <string name="logo_text">Мастер получения прибыли</string>
-    <string name="rezult">РАСЧИТАТЬ</string>
+    <string name="rezult">РАССЧИТАТЬ</string>
     <string name="zaplatil">Сумарные затраты :</string>
     <string name="plus_steam">Доход :</string>
     <string name="zist_pribil">Прибыль :</string>

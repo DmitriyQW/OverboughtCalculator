@@ -2,7 +2,6 @@ package com.tradecalc.lernjava;
 
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.net.ConnectivityManager;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -12,10 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.ImageRequest;
-import com.android.volley.toolbox.Volley;
+
 import com.tradecalc.lernjava.databinding.ActivityMain4Binding;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -67,22 +63,19 @@ public class MainActivity4 extends AppCompatActivity {
         try {
             doc = Jsoup.connect("https://www.banki.ru/investment/shares/russian_shares/popular/").get();
 
+
             //Берём все строчки акций по классу
-            Elements table = doc.getElementsByClass("Panel__sc-1g68tnu-1 hDJOiX");
+            Elements table = doc.getElementsByClass("Panel__sc-1g68tnu-1 jgYkzv");
 
 
             //Первое место в топе элем 0 элементом
             Element select_element_0 = table.get(0);
 
-            //Первое место имена главное и второе
-            Elements mainNeam_0_teamp = select_element_0.getElementsByClass("TextResponsive__sc-hroye5-0 jKnrKA");
-            Elements firstNeam_0_teamp = select_element_0.getElementsByClass("TextResponsive__sc-hroye5-0 jxebas");
-            mainName_0 = mainNeam_0_teamp.get(0).text();
-            firstName_0 = firstNeam_0_teamp.get(0).text();
-
-//            //Картинка
-//            Elements imagesSrc = select_element_0.getElementsByClass("FlexboxGrid__sc-akw86o-0 dCpMUp");
-//            Log.d("Картинки ссылки",imagesSrc.html());
+              //Первое место имена главное и второе
+              Elements mainNeam_0_teamp = select_element_0.getElementsByClass("TextResponsive__sc-hroye5-0 jKnrKA");
+              Elements firstNeam_0_teamp = select_element_0.getElementsByClass("TextResponsive__sc-hroye5-0 jxebas");
+              mainName_0 = mainNeam_0_teamp.get(0).text();
+              firstName_0 = firstNeam_0_teamp.get(0).text();
 
 
             //Цена на первое место
@@ -90,10 +83,8 @@ public class MainActivity4 extends AppCompatActivity {
             cost_0 = costs_0.get(0).text();
             Log.d("Цена акции под первым местом", cost_0);
 
-//            //Картинка первого места
-//            Elements src_0 = select_element_0.getElementsByClass("Logo__StyledLogo-sc-2kyqmf-0 kMrSPl");
-//            //urlImage_0 = src_0.text();
-//            Log.d("Url : ",src_0.html());
+
+            Log.d("test",table.html());
 
 
             //Второе место в топе элем 1 элементом
@@ -107,9 +98,12 @@ public class MainActivity4 extends AppCompatActivity {
             //Второе место имена главное и второе
             Elements mainNeam_1_teamp = select_element_1.getElementsByClass("TextResponsive__sc-hroye5-0 jKnrKA");
             Elements firstNeam_1_teamp = select_element_1.getElementsByClass("TextResponsive__sc-hroye5-0 jxebas");
+
             mainName_1 = mainNeam_1_teamp.get(0).text();
             firstName_1 = firstNeam_1_teamp.get(0).text();
 
+            Log.d("test1",mainName_1);
+            Log.d("test2",firstName_1);
             //Третье место в топе элем 2 элементом
             Element select_element_2 = table.get(2);
 
@@ -139,58 +133,23 @@ public class MainActivity4 extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(Void unused) {
+
         // Изменяем графический интерфейс
 
             //Первое место
-            bunding4.textViewTopMainName.setText(mainName_0);
-            bunding4.textViewTopFirstName.setText(firstName_0);
-            bunding4.textViewCostTop.setText(cost_0);
+              bunding4.textViewTopMainName.setText(mainName_0);
+              bunding4.textViewTopFirstName.setText(firstName_0);
+              bunding4.textViewCostTop.setText(cost_0);
 
-
-//            ImageRequest imageRequest_0 = new ImageRequest(urlImage_0, new Response.Listener<Bitmap>() {
-//                @Override
-//                public void onResponse(Bitmap responce) {
-//                    bunding4.imageViewTop.setImageBitmap(responce);
-//                }
-//            }, 114, 104, null, Bitmap.Config.ARGB_8888, new Response.ErrorListener() {
-//                @Override
-//                public void onErrorResponse(VolleyError volleyError) {
-//                    Toast.makeText(MainActivity4.this,"Не вышло загрузить",Toast.LENGTH_LONG).show();
-//                }
-//            });
-//            Volley.newRequestQueue(MainActivity4.this).add(imageRequest_0);
             //Второе место
             bunding4.textViewSecondMainName.setText(mainName_1);
             bunding4.textViewSecondFirstName.setText(firstName_1);
             bunding4.textViewCostSecond.setText(cost_1);
-//            ImageRequest imageRequest_1 = new ImageRequest(urlImage_0, new Response.Listener<Bitmap>() {
-//                @Override
-//                public void onResponse(Bitmap responce) {
-//                    bunding4.imageViewSecond.setImageBitmap(responce);
-//                }
-//            }, 114, 104, null, Bitmap.Config.ARGB_8888, new Response.ErrorListener() {
-//                @Override
-//                public void onErrorResponse(VolleyError volleyError) {
-//                    Toast.makeText(MainActivity4.this,"Не вышло загрузить",Toast.LENGTH_LONG).show();
-//                }
-//            });
-//            Volley.newRequestQueue(MainActivity4.this).add(imageRequest_1);
+
             //Третье место
             bunding4.textViewThirdMainName.setText(mainName_2);
             bunding4.textViewThirdFirstName.setText(firstName_2);
             bunding4.textViewCostThird.setText(cost_2);
-//            ImageRequest imageRequest_2 = new ImageRequest(urlImage_0, new Response.Listener<Bitmap>() {
-//                @Override
-//                public void onResponse(Bitmap responce) {
-//                    bunding4.imageViewThird.setImageBitmap(responce);
-//                }
-//            }, 114, 104, null, Bitmap.Config.ARGB_8888, new Response.ErrorListener() {
-//                @Override
-//                public void onErrorResponse(VolleyError volleyError) {
-//                    Toast.makeText(MainActivity4.this,"Не вышло загрузить",Toast.LENGTH_LONG).show();
-//                }
-//            });
-//            Volley.newRequestQueue(MainActivity4.this).add(imageRequest_2);
         }
     }
 
